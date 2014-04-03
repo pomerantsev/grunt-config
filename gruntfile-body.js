@@ -60,7 +60,12 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.registerTask('say-something', function () {
+    console.log('Something.');
+  });
+
   grunt.registerTask('serve', [
+    'say-something',
     'clean:server',
     'traceur',
     'connect:livereload',
